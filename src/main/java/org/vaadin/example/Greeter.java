@@ -3,12 +3,10 @@ package org.vaadin.example;
 import dev.restate.sdk.JsonSerdes;
 import dev.restate.sdk.ObjectContext;
 import dev.restate.sdk.annotation.Handler;
-import dev.restate.sdk.annotation.VirtualObject;
 import dev.restate.sdk.common.StateKey;
-import org.springframework.stereotype.Component;
+import dev.restate.sdk.springboot.RestateVirtualObject;
 
-@Component
-@VirtualObject
+@RestateVirtualObject
 public class Greeter {
 
   private final static StateKey<Integer> COUNTER = StateKey.of("counter", JsonSerdes.INT);
